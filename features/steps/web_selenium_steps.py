@@ -16,12 +16,6 @@ def navigate_to_url(context, url):
     # clear the "before you continue to google" popup if it shows itself
     browser.find_element(By.ID, "L2AGLb").click()
 
-    # xpath for the "continue to google" window is //h1[text()="Before you continue to Google"]
-    # this finds the button //*[@id="L2AGLb"]
-    # //*[@name="q"]
-
-    # raise NotImplementedError(u'STEP: Given navigate to "https://www.google.co.uk"')
-
 
 @when('search for the text "{search_text}"')
 def step_impl(context, search_text):
@@ -40,9 +34,3 @@ def validate_results(context):
     browser = context.browser
     news_results = browser.find_element(By.XPATH, '//span[text()="Top stories"]')
     assert news_results.text == "Top stories"
-
-    # logging.info(news_results.text)
-
-    # //span[text()="Top stories"]
-
-    # raise NotImplementedError(u'STEP: Then search results are displayed')
