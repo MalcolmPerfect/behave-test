@@ -1,0 +1,15 @@
+2023-10-20 13:58:05.920 | INFO       | environment(8) | init_logging | Logging configured for DEBUG
+2023-10-20 13:58:05.920 | INFO       | environment(16) | before_feature | Running feature simple feature
+2023-10-20 13:58:05.920 | INFO       | environment(17) | before_feature | Feature tags []
+2023-10-20 13:58:05.920 | INFO       | environment(25) | before_scenario | before scenario simplest scenario
+2023-10-20 13:58:05.940 | INFO       | environment(29) | after_scenario | after scenario simplest scenario
+2023-10-20 13:58:05.940 | INFO       | environment(16) | before_feature | Running feature web with selenium
+2023-10-20 13:58:05.940 | INFO       | environment(17) | before_feature | Feature tags ['browser.chrome']
+2023-10-20 13:58:05.940 | INFO       | environment(20) | before_feature | tag found!!
+2023-10-20 13:58:05.940 | INFO       | environment(36) | init_chrome | initialising chrome
+2023-10-20 13:58:08.247 | INFO       | environment(25) | before_scenario | before scenario simple search
+2023-10-20 13:58:08.260 | INFO       | web_selenium_steps(12) | navigate_to_url | navigating to url https://www.google.co.uk
+2023-10-20 13:58:09.034 | DEBUG      | web_selenium_steps(28) | step_impl | searching for news
+2023-10-20 13:58:09.544 | DEBUG      | web_selenium_steps(38) | validate_results | valiating results
+2023-10-20 13:58:11.038 | INFO       | environment(29) | after_scenario | after scenario simple search
+2023-10-20 13:58:11.038 | INFO       | environment(49) | _wrapper | quitting browser

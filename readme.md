@@ -7,8 +7,14 @@ Simple-ish setup for now, just using a virtual environment. Will introduce toml 
 ```DOS
 python -m venv venv --prompt .
 venv/scripts/activate 
+
 pip install behave
+
 pip install selenium
+
+pip install requests
+pip install beautifulsoup4
+pip install lxml
 ``````
 
 ### first feature
@@ -44,9 +50,29 @@ behave --logging-level DEBUG
 
 ### running behave and debugging
 
+#### running
+Loads of info in the behave docs. Run per-feature in the following way
+```DOS
+behave features/simple_feature.feature --logging-level DEBUG
+```
+
 #### debugging
-Normally would have in .gitignore, but I included the [debug launch configuration](.vscode/launch.json), this allows you to run F5 from the feature file and debug within vscode. 
+Normally would have in .gitignore, but I included the [debug launch configuration](.vscode/launch.json), this allows you to run F5 from the feature file and debug within vscode. Added debug logging to run in pretty much the same way as above
+
+## feature files
+### simple_feature
+[simple_feature](features/simple_feature.feature) is just for testing how behave works. Used for an initial scenario and seeing how params work etc. It doesn't actually test anything
+
+### web health
+[web_health](features/web_health.feature) shows a basic example of checking that all the pages in a sitemap return a 200.
 
 
-### selenium setup
-Initialising the webdriver is quite costly, so here have shown one way how to do it per-feature. Normally wouldn't optimise for 1 scenario but it's common to avoid initialising on every scenario.
+### web selenium
+[web_selenium](features/web_selenium.feature) is a basic selenium example. It shows one way of initialising the webdriver at a feature level (rather than every scenario). Could be achieved via tags and tag execution in a similar way.
+
+
+### sample web health
+
+run just the health feature
+behave --include web_health.feature --logging-level DEBUG
+
