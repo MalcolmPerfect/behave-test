@@ -32,8 +32,6 @@ def step_total_gherkins(context, gherkins_total: int):
 @when("I eat {gherkins_eaten:Number} gherkins")
 def step_eaten_gherkins(context, gherkins_eaten: int):
     context.gherkins_eaten = gherkins_eaten
-    pass
-    # raise NotImplementedError(u'STEP: When Rex eats 88 gherkins')
 
 
 @then("there are {gherkins_remaining:Number} gherkins left")

@@ -1,7 +1,8 @@
 @browser.chrome
 Feature: web with selenium
     Simple example of web automation using selenium with behave,
-    just for learning purposes. The chrome browser is setup and
+    just for learning purposes (so selenium locator code not
+    defensive etc.). The chrome browser is setup and
     torn down at the feature level
 
   Scenario: simple search

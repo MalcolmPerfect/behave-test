@@ -1,8 +1,5 @@
 import logging
-
 from behave import given, when, then
-
-
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 
@@ -29,7 +26,7 @@ def step_impl(context, search_text):
 
 @then("search results are displayed")
 def validate_results(context):
-    logging.debug("valiating results")
+    logging.debug("validating results")
 
     browser = context.browser
     news_results = browser.find_element(By.XPATH, '//span[text()="Top stories"]')
